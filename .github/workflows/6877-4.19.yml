@@ -12,7 +12,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-
+      - name: something
+        run: |
+          echo "deb http://security.ubuntu.com/ubuntu focal-security main universe" > /etc/apt/sources.list.d/ubuntu-focal-sources.list
+          apt-get update
       - name: Setup environment
         uses: daaku/gh-action-apt-install@v4
         with:
