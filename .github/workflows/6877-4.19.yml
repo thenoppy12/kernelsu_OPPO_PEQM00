@@ -24,6 +24,7 @@ jobs:
         run: |
           
           cd $HOME
+          rm -rf clang
           git clone https://github.com/thenoppy12/clang-r416183b.git clang --depth=1
 
       - name: Pull kernel source
@@ -68,7 +69,7 @@ jobs:
 
         run: |
 
-          cd /home/runner/work/android_kernel_OPPO_PEQM00/android_kernel_OPPO_PEQM00/kernel-4.19
+          cd /home/fkrystal/action-runner/_work/kernelsu_OPPO_PEQM00/kernelsu_OPPO_PEQM00/kernel-4.19
           
           test -f build_kernel.sh && rm build_kernel.sh && wget https://raw.githubusercontent.com/dabao1955/android_kernel_OPPO_PEQM00/README/build_kernel.sh
 
