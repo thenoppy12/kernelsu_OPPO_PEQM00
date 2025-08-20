@@ -9,7 +9,7 @@ jobs:
 
   build-kernel:
 
-    runs-on: ubuntu-22.04
+    runs-on: fkrystal-22.04
 
     steps:
       - name: Setup environment
