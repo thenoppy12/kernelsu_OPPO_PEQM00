@@ -21,11 +21,11 @@ jobs:
           git clone https://github.com/thenoppy12/clang-r416183b.git clang --depth=1
       - name: Pull kernel source
         run: |
-          rm -rf android_kernel_OPPO_PEQM00-4.19-ksu-dev.zip
+          rm -rf android_kernel_oppo_mt6877-oppo-mt6877_t_13.1.0_reno7_5g.zip
           rm -rf kernel-4.19
-          aria2c https://github.com/dabao1955/android_kernel_OPPO_PEQM00/archive/refs/heads/4.19-ksu-dev.zip
-          unzip -q android_kernel_OPPO_PEQM00-4.19-ksu-dev.zip 
-          mv android_kernel_OPPO_PEQM00-4.19-ksu-dev kernel-4.19 -v
+          aria2c https://github.com/oppo-source/android_kernel_oppo_mt6877/archive/refs/heads/oppo/mt6877_t_13.1.0_reno7_5g.zip
+          unzip -q android_kernel_oppo_mt6877-oppo-mt6877_t_13.1.0_reno7_5g.zip 
+          mv android_kernel_oppo_mt6877-oppo-mt6877_t_13.1.0_reno7_5g kernel-4.19 -v
       - name: Pull kernel vendor source
         run: |
           rm -rf android_kernel_modules_oppo_mtk_4.19
