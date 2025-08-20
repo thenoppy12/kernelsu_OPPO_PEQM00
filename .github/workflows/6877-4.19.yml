@@ -53,9 +53,7 @@ jobs:
         run: |
 
           export KBUILD_BUILD_USER="dabao1955"
-
-          cd /home/runner/work/android_kernel_OPPO_PEQM00/android_kernel_OPPO_PEQM00/kernel-4.19
-
+          cd /home/fkrystal/action-runner/_work/kernelsu_OPPO_PEQM00/kernelsu_OPPO_PEQM00/kernel-4.19
           bash setup.sh
       - name: Setup ccache
 
