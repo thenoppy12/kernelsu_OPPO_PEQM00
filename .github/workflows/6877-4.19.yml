@@ -24,7 +24,7 @@ jobs:
         run: |
           
           cd $HOME
-          git clone https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86 --depth=2
+          git clone https://github.com/thenoppy12/clang-r416183b.git clang --depth=1
 
       - name: Pull kernel source
 
