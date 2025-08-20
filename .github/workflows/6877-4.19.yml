@@ -6,7 +6,7 @@ jobs:
 
   build-kernel:
 
-    runs-on: fkrystal-20.04
+    runs-on: fkrystal-1
 
     steps:
       - name: Setup environment
