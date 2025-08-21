@@ -54,8 +54,10 @@ jobs:
         # "/home/runner/work"
         run: |
           cd /home/fkrystal/action-runner/_work/kernelsu_OPPO_PEQM00/kernelsu_OPPO_PEQM00/kernel-4.19
-          test -f build_kernel.sh && rm build_kernel.sh && wget https://raw.githubusercontent.com/dabao1955/android_kernel_OPPO_PEQM00/README/build_kernel.sh
-          bash build_kernel.sh
+          rm -rf out
+          mkdir -p out
+          make O=out ARCH=arm64 k6877v1_64_k419_defconfig
+          make O=out ARCH=arm64 CC=clang CROSS_COMPILE=$HOME/aarch64-linux-android-4.9 CROSS_COMPILE_ARM32=$HOME/arm-linux-androideabi-4.9
       - name: Upload kernel to artifact
         uses: actions/upload-artifact@v4
         with:
